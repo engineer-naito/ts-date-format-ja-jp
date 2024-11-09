@@ -1,10 +1,10 @@
 # 概要
 ライブラリを使わずに日付フォーマットを行うTypeScriptのコードです。
-`src/dateUtil.ts` の必要なフォーマットをコピペして使ってください。
+必要なフォーマットをコピペして使ってください。
 
 詳しくは[TypeScriptにおける日付フォーマットのベストプラクティス](https://zenn.dev/) の記事をご覧ください。
 
-# 実行例
+# 使い方
 
 ```typescript
 import { formatDate } from './dateUtil';
