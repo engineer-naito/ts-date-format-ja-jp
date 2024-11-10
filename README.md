@@ -2,7 +2,7 @@
 ライブラリを使わずに日付フォーマットを行うTypeScriptのコードです。
 必要なフォーマットをコピペして使ってください。
 
-詳しくは[TypeScriptにおける日付フォーマットのベストプラクティス](https://zenn.dev/) の記事をご覧ください。
+詳しくは[TypeScriptにおける日付フォーマットのベストプラクティス](https://zenn.dev/voiceapplab/articles/10dfe2c892614f) の記事をご覧ください。
 
 # 使い方
 
