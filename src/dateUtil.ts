@@ -128,7 +128,7 @@ export function formatDate(date: Date, format: '(GENGOU)Y.M.D'): string;
  * 日付を (GENGOU)Y.MM.DD 形式の文字列に変換します
  * @param date 変換対象の日付
  * @param format (GENGOU)Y.MM.DD
- * @returns {string} 例: R06.04.08
+ * @returns {string} 例: R6.04.08
  */
 export function formatDate(date: Date, format: '(GENGOU)Y.MM.DD'): string;
 
@@ -281,6 +281,7 @@ export function formatDate(date: Date, format: 'YYYY-MM-DDTHH:mm:ss.SSSZ'): stri
  * 日時を YYYY-MM-DD HH:mm:ss 形式の文字列に変換します
  * @param date 変換対象の日時
  * @param format YYYY-MM-DD HH:mm:ss
+ * @returns {string} 例: 2024-04-08 09:05:45.123
  */
 export function formatDate(date: Date, format: 'YYYY-MM-DD HH:mm:ss'): string;
 
