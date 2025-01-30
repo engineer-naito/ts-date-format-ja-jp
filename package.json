@@ -10,7 +10,7 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/date-format.es.js",
       "types": "./dist/index.d.ts"
     }
   },
