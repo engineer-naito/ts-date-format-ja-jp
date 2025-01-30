@@ -10,4 +10,12 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    lib: {
+      entry: "src/dateFormat.ts",
+      name: "DateFormat",
+      fileName: format => `date-format.${format}.js`,
+      formats: ["es", "cjs"],
+    },
+  },
 });
