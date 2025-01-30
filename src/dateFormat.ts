@@ -1,4 +1,4 @@
-type SupportedDateFormat =
+export type SupportedDateFormat =
   "YYYY-MM-DD" |
   "YYYY/MM/DD" |
   "YYYY/MM/DD(ddd)" |
@@ -551,13 +551,12 @@ export function formatDate(date: Date, format: SupportedDateFormat): string {
       });
 
     case "HH:mm:ss.SSS":
-      return `${
-        date.toLocaleTimeString("ja-JP", {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: false,
-        })
+      return `${date.toLocaleTimeString("ja-JP", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      })
       }.${String(date.getMilliseconds()).padStart(3, "0")}`;
 
     case "HH:mm:ss":
@@ -576,19 +575,14 @@ export function formatDate(date: Date, format: SupportedDateFormat): string {
       });
 
     case "HH時mm分ss秒":
-      return `${
-        String(date.getHours()).padStart(2, "0")
-      }時${
-        String(date.getMinutes()).padStart(2, "0")
-      }分${
-        String(date.getSeconds()).padStart(2, "0")
+      return `${String(date.getHours()).padStart(2, "0")
+      }時${String(date.getMinutes()).padStart(2, "0")
+      }分${String(date.getSeconds()).padStart(2, "0")
       }秒`;
 
     case "HH時mm分":
-      return `${
-        String(date.getHours()).padStart(2, "0")
-      }時${
-        String(date.getMinutes()).padStart(2, "0")
+      return `${String(date.getHours()).padStart(2, "0")
+      }時${String(date.getMinutes()).padStart(2, "0")
       }分`;
 
     case "H時m分":
@@ -635,54 +629,44 @@ export function formatDate(date: Date, format: SupportedDateFormat): string {
       });
 
     case "YYYY年MM月DD日HH時mm分ss秒":
-      return `${
-        date.getFullYear()
-      }年${
-        String(date.getMonth() + 1).padStart(2, "0")
-      }月${
-        String(date.getDate()).padStart(2, "0")
-      }日${
-        String(date.getHours()).padStart(2, "0")
-      }時${
-        String(date.getMinutes()).padStart(2, "0")
-      }分${
-        String(date.getSeconds()).padStart(2, "0")
+      return `${date.getFullYear()
+      }年${String(date.getMonth() + 1).padStart(2, "0")
+      }月${String(date.getDate()).padStart(2, "0")
+      }日${String(date.getHours()).padStart(2, "0")
+      }時${String(date.getMinutes()).padStart(2, "0")
+      }分${String(date.getSeconds()).padStart(2, "0")
       }秒`;
 
     case "YYYY年M月D日H時m分":
-      return `${
-        date.toLocaleDateString("ja-JP", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })
+      return `${date.toLocaleDateString("ja-JP", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
       }${date.getHours()}時${date.getMinutes()}分`;
 
     case "YYYY年M月D日H時":
-      return `${
-        date.toLocaleDateString("ja-JP", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })
+      return `${date.toLocaleDateString("ja-JP", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
       }${date.getHours()}時`;
 
     case "(元号)Y年M月D日H時m分":
-      return `${
-        date.toLocaleDateString("ja-JP-u-ca-japanese", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })
+      return `${date.toLocaleDateString("ja-JP-u-ca-japanese", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
       }${date.getHours()}時${date.getMinutes()}分`;
 
     case "(元号)Y年M月D日H時":
-      return `${
-        date.toLocaleDateString("ja-JP-u-ca-japanese", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })
+      return `${date.toLocaleDateString("ja-JP-u-ca-japanese", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
       }${date.getHours()}時`;
 
     case "MM/DD HH:mm:ss":
@@ -703,32 +687,25 @@ export function formatDate(date: Date, format: SupportedDateFormat): string {
       });
 
     case "MM月DD日HH時mm分ss秒":
-      return `${
-        String(date.getMonth() + 1).padStart(2, "0")
-      }月${
-        String(date.getDate()).padStart(2, "0")
-      }日${
-        String(date.getHours()).padStart(2, "0")
-      }時${
-        String(date.getMinutes()).padStart(2, "0")
-      }分${
-        String(date.getSeconds()).padStart(2, "0")
+      return `${String(date.getMonth() + 1).padStart(2, "0")
+      }月${String(date.getDate()).padStart(2, "0")
+      }日${String(date.getHours()).padStart(2, "0")
+      }時${String(date.getMinutes()).padStart(2, "0")
+      }分${String(date.getSeconds()).padStart(2, "0")
       }秒`;
 
     case "M月D日H時m分":
-      return `${
-        date.toLocaleDateString("ja-JP", {
-          month: "long",
-          day: "numeric",
-        })
+      return `${date.toLocaleDateString("ja-JP", {
+        month: "long",
+        day: "numeric",
+      })
       }${date.getHours()}時${date.getMinutes()}分`;
 
     case "M月D日H時":
-      return `${
-        date.toLocaleDateString("ja-JP", {
-          month: "long",
-          day: "numeric",
-        })
+      return `${date.toLocaleDateString("ja-JP", {
+        month: "long",
+        day: "numeric",
+      })
       }${date.getHours()}時`;
 
     case "YYYY":

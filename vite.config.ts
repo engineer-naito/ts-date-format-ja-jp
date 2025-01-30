@@ -1,4 +1,5 @@
 import { defineConfig } from "vitest/config";
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
   test: {
@@ -15,7 +16,13 @@ export default defineConfig({
       entry: "src/dateFormat.ts",
       name: "DateFormat",
       fileName: format => `date-format.${format}.js`,
-      formats: ["es", "cjs"],
+      formats: ["es"],
     },
   },
+  plugins: [
+    dts({ // 🔹 型定義ファイルの出力を有効化
+      outDir: "dist",
+      insertTypesEntry: true,
+    }),
+  ],
 });
