@@ -187,7 +187,7 @@ describe('formatDate', () => {
   it('formats date as MM/DD HH:mm:ss', () => {
     expect(formatDate(testDate, 'MM/DD HH:mm:ss')).toBe('04/09 09:01:02');
   });
-  
+
   it('formats date as MM/DD HH:mm', () => {
     expect(formatDate(testDate, 'MM/DD HH:mm')).toBe('04/09 09:01');
   });
