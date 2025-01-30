@@ -20,7 +20,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    dts({ // 🔹 型定義ファイルの出力を有効化
+    dts({
       outDir: "dist",
       insertTypesEntry: true,
     }),
