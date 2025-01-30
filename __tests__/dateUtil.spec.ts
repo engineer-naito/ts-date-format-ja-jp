@@ -251,7 +251,7 @@ describe('formatDate', () => {
   });
 
   it('Unsupported format throws error', () => {
-    // @ts-ignore
+    // @ts-expect-error Testing an unsupported format case
     expect(() => formatDate(testDate, 'YYYY-MM-DD mm:ss')).toThrow(
       'Unsupported format: YYYY-MM-DD mm:ss'
     );
