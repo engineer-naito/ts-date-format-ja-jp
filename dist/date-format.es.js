@@ -219,6 +219,11 @@ function e(t, r) {
         month: "long",
         day: "numeric"
       })}${t.getHours()}時`;
+    case "(元号)Y年":
+      return t.toLocaleDateString("ja-JP-u-ca-japanese", {
+        era: "short",
+        year: "numeric"
+      });
     case "YYYY":
       return String(t.getFullYear());
     case "MM":

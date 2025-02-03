@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { formatDate } from "../src/dateUtil";
+import { formatDate } from "../src/dateFormat";
 
 describe("formatDate", () => {
   let preTimezone: string | undefined;
@@ -204,6 +204,10 @@ describe("formatDate", () => {
   it("formats date as M月D日H時", () => {
     expect(formatDate(testDate, "M月D日H時")).toBe("4月9日9時");
     expect(formatDate(pm, "M月D日H時")).toBe("4月9日21時");
+  });
+
+  it("formats date as (元号)Y", () => {
+    expect(formatDate(testDate, "(元号)Y年")).toBe("令和6年");
   });
 
   it("formats date as YYYY", () => {

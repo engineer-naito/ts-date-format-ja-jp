@@ -40,6 +40,7 @@ export type SupportedDateFormat =
   "MM月DD日HH時mm分ss秒" |
   "M月D日H時m分" |
   "M月D日H時" |
+  "(元号)Y年" |
   "YYYY" |
   "MM" |
   "M" |
@@ -421,7 +422,7 @@ export function formatDate(date: Date, format: "M月D日H時"): string;
  * - 's': 秒
  * @returns {string} 指定された要素の文字列
  */
-export function formatDate(date: Date, format: "YYYY" | "MM" | "M" | "DD" | "D" | "HH" | "H" | "mm" | "m" | "ss" | "s"): string;
+export function formatDate(date: Date, format: "(元号)Y年" | "YYYY" | "MM" | "M" | "DD" | "D" | "HH" | "H" | "mm" | "m" | "ss" | "s"): string;
 
 // 実装
 export function formatDate(date: Date, format: SupportedDateFormat): string {
@@ -707,6 +708,12 @@ export function formatDate(date: Date, format: SupportedDateFormat): string {
         day: "numeric",
       })
       }${date.getHours()}時`;
+
+    case "(元号)Y年":
+      return date.toLocaleDateString("ja-JP-u-ca-japanese", {
+        era: "short",
+        year: "numeric",
+      });
 
     case "YYYY":
       return String(date.getFullYear());

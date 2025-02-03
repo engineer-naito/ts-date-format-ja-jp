@@ -1,4 +1,4 @@
-export type SupportedDateFormat = "YYYY-MM-DD" | "YYYY/MM/DD" | "YYYY/MM/DD(ddd)" | "YYYY/MM/DD(曜)" | "YYYY年M月D日" | "YYYY年M月D日(曜)" | "(元号)Y年M月D日" | "(元号)Y年M月D日(曜)" | "(GENGOU)Y.M.D" | "(GENGOU)Y.MM.DD" | "MM/DD" | "MM/DD(ddd)" | "MM/DD(曜)" | "M/D" | "M/D(ddd)" | "M/D(曜)" | "M月D日" | "M月D日(曜)" | "HH:mm:ss.SSS" | "HH:mm:ss" | "HH:mm" | "HH時mm分ss秒" | "HH時mm分" | "H時m分" | "HH時" | "H時" | "ISO8601" | "YYYY-MM-DDTHH:mm:ss.SSSZ" | "YYYY-MM-DD HH:mm:ss" | "YYYY/MM/DD HH:mm:ss" | "YYYY/MM/DD HH:mm" | "YYYY年MM月DD日HH時mm分ss秒" | "YYYY年M月D日H時m分" | "YYYY年M月D日H時" | "(元号)Y年M月D日H時m分" | "(元号)Y年M月D日H時" | "MM/DD HH:mm:ss" | "MM/DD HH:mm" | "MM月DD日HH時mm分ss秒" | "M月D日H時m分" | "M月D日H時" | "YYYY" | "MM" | "M" | "DD" | "D" | "HH" | "H" | "mm" | "m" | "ss" | "s";
+export type SupportedDateFormat = "YYYY-MM-DD" | "YYYY/MM/DD" | "YYYY/MM/DD(ddd)" | "YYYY/MM/DD(曜)" | "YYYY年M月D日" | "YYYY年M月D日(曜)" | "(元号)Y年M月D日" | "(元号)Y年M月D日(曜)" | "(GENGOU)Y.M.D" | "(GENGOU)Y.MM.DD" | "MM/DD" | "MM/DD(ddd)" | "MM/DD(曜)" | "M/D" | "M/D(ddd)" | "M/D(曜)" | "M月D日" | "M月D日(曜)" | "HH:mm:ss.SSS" | "HH:mm:ss" | "HH:mm" | "HH時mm分ss秒" | "HH時mm分" | "H時m分" | "HH時" | "H時" | "ISO8601" | "YYYY-MM-DDTHH:mm:ss.SSSZ" | "YYYY-MM-DD HH:mm:ss" | "YYYY/MM/DD HH:mm:ss" | "YYYY/MM/DD HH:mm" | "YYYY年MM月DD日HH時mm分ss秒" | "YYYY年M月D日H時m分" | "YYYY年M月D日H時" | "(元号)Y年M月D日H時m分" | "(元号)Y年M月D日H時" | "MM/DD HH:mm:ss" | "MM/DD HH:mm" | "MM月DD日HH時mm分ss秒" | "M月D日H時m分" | "M月D日H時" | "(元号)Y年" | "YYYY" | "MM" | "M" | "DD" | "D" | "HH" | "H" | "mm" | "m" | "ss" | "s";
 /**
  * 日付を YYYY-MM-DD 形式の文字列に変換します
  * @param date 変換対象の日付
@@ -324,5 +324,5 @@ export declare function formatDate(date: Date, format: "M月D日H時"): string;
  * - 's': 秒
  * @returns {string} 指定された要素の文字列
  */
-export declare function formatDate(date: Date, format: "YYYY" | "MM" | "M" | "DD" | "D" | "HH" | "H" | "mm" | "m" | "ss" | "s"): string;
+export declare function formatDate(date: Date, format: "(元号)Y年" | "YYYY" | "MM" | "M" | "DD" | "D" | "HH" | "H" | "mm" | "m" | "ss" | "s"): string;
 //# sourceMappingURL=dateFormat.d.ts.map
